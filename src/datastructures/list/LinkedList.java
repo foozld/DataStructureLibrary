@@ -21,6 +21,7 @@ public class LinkedList<T> {
 		size = 0;
 	}
 	
+	//O(1)
 	public void addHead(T data) {
 		Node<T> newNode = new Node<>(data);
 		if (isEmpty()) {
@@ -34,6 +35,7 @@ public class LinkedList<T> {
 		size++;
 	}
 	
+	//O(1)
 	public void addTail(T data) {
 		Node<T> newNode = new Node<>(data);
 		if (isEmpty()) {
@@ -47,6 +49,7 @@ public class LinkedList<T> {
 		size++;
 	}
 	
+	//O(1)
 	public T removeHead() {
 		if (isEmpty()) {
 			return null;
@@ -62,12 +65,31 @@ public class LinkedList<T> {
 		return value;
 	}
 	
+	//O(n)
 	public T removeTail() {
+		if (isEmpty()) {
+			return null;
+		}
+		
 		T value = tail.data;
-				
+		if (size == 1) {
+			head = null;
+			tail = null;
+		} else {
+			Node<T> curr = head;
+		
+			while (curr.next != tail) {
+				curr = curr.next;
+			}
+			
+			curr.next = null;
+			tail = curr;
+		}		
+		size--;
 		return value;
 	}
 	
+	//O(n)
 	public boolean contains(T data) {
 		Node<T> curr = head;
 		

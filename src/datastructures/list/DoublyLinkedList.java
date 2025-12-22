@@ -23,6 +23,7 @@ public class DoublyLinkedList<T> {
 		size = 0;
 	}
 	
+	//O(1)
 	public void addHead(T data) {
 		Node<T> newNode = new Node<T>(data);
 		if (isEmpty()) {
@@ -36,6 +37,7 @@ public class DoublyLinkedList<T> {
 		size++;
 	}
 	
+	//O(1)
 	public void addTail(T data) {
 		Node<T> newNode = new Node<T>(data);
 		if (isEmpty()) {
@@ -49,6 +51,7 @@ public class DoublyLinkedList<T> {
 		size++;
 	}
 	
+	//O(1)
 	public T removeHead() {
 		if (isEmpty()) {
 			return null;
@@ -67,6 +70,7 @@ public class DoublyLinkedList<T> {
 		return value;
 	}
 	
+	//O(1)
 	public T removeTail() {
 		if (isEmpty()) {
 			return null;
@@ -84,6 +88,7 @@ public class DoublyLinkedList<T> {
 		return value;
 	}
 	
+	//O(n)
 	public boolean contains(T data) {
 		Node<T> curr = head;
 		
