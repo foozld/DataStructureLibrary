@@ -6,7 +6,7 @@ public class LinkedList<T> {
 		Node<T> next;
 		
 		Node (T data) {
-			this.data = null;
+			this.data = data;
 			this.next = null;
 		}
 	}//node class
@@ -27,7 +27,6 @@ public class LinkedList<T> {
 		if (isEmpty()) {
 			head = newNode;
 			tail = newNode;
-			size++;
 		} else {
 			newNode.next = head;
 			head = newNode;
@@ -41,7 +40,6 @@ public class LinkedList<T> {
 		if (isEmpty()) {
 			head = newNode;
 			tail = newNode;
-			size++;
 		} else {
 			tail.next = newNode;
 			tail = newNode;

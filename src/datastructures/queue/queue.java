@@ -1,5 +1,5 @@
 package datastructures.queue;
 
-public class queue {
+public class Queue {
 
 }
