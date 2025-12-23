@@ -32,4 +32,4 @@ public class Stack<T> {
 		return list.size();
 	}
 
-}
+}//stack
