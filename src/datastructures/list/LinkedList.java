@@ -100,6 +100,14 @@ public class LinkedList<T> {
 		return false;
 	}
 	
+	//O(1)
+	public T peekHead() {
+		if (isEmpty()) {
+			return null;
+		}
+		return head.data;
+	}
+	
 	public int size() {
 		return size;
 	}
