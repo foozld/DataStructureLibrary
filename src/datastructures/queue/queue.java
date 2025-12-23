@@ -9,14 +9,17 @@ public class Queue<T> {
 		list = new LinkedList<>();
 	}
 	
+	//O(1)
 	public void enqueue(T data) {
 		list.addTail(data);
 	}
 	
+	//O(1)
 	public T dequeue() {
 		return list.removeHead();
 	}
 	
+	//O(1)
 	public T peek() {
 		if (isEmpty()) {
 			return null;

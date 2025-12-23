@@ -9,14 +9,17 @@ public class Stack<T> {
 		list = new LinkedList<>();
 	}
 	
+	//O(1)
 	public void push(T data) {
 		list.addHead(data);
 	}
 	
+	//O(1)
 	public T pop() {
 		return list.removeTail();
 	}
 	
+	//O(1)
 	public T peek() {
 		if (isEmpty()) {
 			return null;
